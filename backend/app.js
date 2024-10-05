@@ -37,7 +37,7 @@ app.use(
 //Cors Policy
 app.use(
   cors({
-    origin: "http://localhost:3000", //give serves just to this domain
+    origin: "https://blog-app-frontend-two-ivory.vercel.app", //give serves just to this domain
   })
 );
 

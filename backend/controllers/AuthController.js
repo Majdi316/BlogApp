@@ -106,7 +106,7 @@ module.exports.loginUserCtrl = asyncHandler(async (req, res) => {
     }
     await verificationToken.save();
     //2. Making the Link
-    const link = `http://localhost:3000/users/${user._id}/verify/${verificationToken.token}`;
+    const link = `https://blog-app-frontend-two-ivory.vercel.app/users/${user._id}/verify/${verificationToken.token}`;
     //3. Putting the link into html template
     const htmlTemplate = `
   <div>
