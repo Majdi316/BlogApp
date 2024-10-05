@@ -38,7 +38,7 @@ module.exports.sendResetPasswordLinkCtrl = asyncHandler(async (req, res) => {
   }
 
   //4. Creating link
-  const link = `${process.env.CLIENT_DOMAIN}/reset-password/${user._id}/${verificationToken.token}`;
+  const link = `http://localhost:3000/reset-password/${user._id}/${verificationToken.token}`;
   //5. Creating HTML template
   const htmlTemplate = `
   <div>
