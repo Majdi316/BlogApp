@@ -22,9 +22,9 @@ const { Comment } = require("../models/Comment");
 //!createPostCtrl
 module.exports.createPostCtrl = asyncHandler(async (req, res) => {
   // 1. Validation for image
-  if (!req.file) {
-    return res.status(400).json({ message: "no image provided" });
-  }
+  // if (!req.file) {
+  //   return res.status(400).json({ message: "no image provided" });
+  // }
   // 2. Validation for data
   const { error } = validateCreatePost(req.body);
   if (error) {
