@@ -47,7 +47,7 @@ module.exports.createPostCtrl = asyncHandler(async (req, res) => {
   // 5. Send response to client
   res.status(201).json(post);
   // 6. Remove image from server (VS Code)
-  fs.unlinkSync(imagePath);
+  //fs.unlinkSync(imagePath);
 });
 
 /**-------------------------------------------------
