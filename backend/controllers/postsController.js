@@ -31,18 +31,18 @@ module.exports.createPostCtrl = asyncHandler(async (req, res) => {
     return res.status(400).json({ message: error.details[0].message });
   }
   // 3. Upload photo
-  const imagePath = path.join(__dirname, `../images/${req.file.filename}`);
-  const result = await cloudinaryUploadImage(imagePath);
+  // const imagePath = path.join(__dirname, `../images/${req.file.filename}`);
+  // const result = await cloudinaryUploadImage(imagePath);
   // 4. Create new post and save it into DB
   const post = await Post.create({
     title: req.body.title,
     description: req.body.description,
     category: req.body.category,
     user: req.user.id,
-    image: {
-      url: result.secure_url,
-      publicId: result.public_id,
-    },
+    // image: {
+    //   url: result.secure_url,
+    //   publicId: result.public_id,
+    // },
   });
   // 5. Send response to client
   res.status(201).json(post);
