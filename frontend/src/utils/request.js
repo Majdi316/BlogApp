@@ -1,5 +1,5 @@
 import axios from "axios";
 const request = axios.create({
-  baseURL: "http://localhost:8000",
+  baseURL: "https://blog-app-hazel-iota.vercel.app",
 });
 export default request;
