@@ -23,7 +23,7 @@ const CreatePost = () => {
     if (category.trim() === "") return toast.error("Post Category is required");
     if (description.trim() === "")
       return toast.error("Post Description is required");
-    if (!file) return toast.error("Post Image is required");
+    // if (!file) return toast.error("Post Image is required");
     const formDate = new FormData();
     formDate.append("image", file); //the string must be same name of DB failed
     formDate.append("title", title);
